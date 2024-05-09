@@ -1,11 +1,12 @@
 using APIConsumer;
 using MobileAppUsers.Models;
+using MobileAppUsers.Utilities;
 
 namespace MobileAppUsers.Pages;
 
 public partial class Home : ContentPage
 {
-    private string ApiUrl = "https://apiusersbleo.onrender.com/api/Users";
+    private string ApiUrl = APIConstants.ApiUrl;
     private User LoggedInUser { get; set; }
 
     public Home(User loggedInUser)
@@ -94,6 +95,12 @@ public partial class Home : ContentPage
             lblUserId.Text = string.Empty;
             lblUsername.Text = string.Empty;
             userInfoLayout.IsVisible = false;
+
+            
+            if (userId == LoggedInUser.id)
+            {
+                await Navigation.PopAsync();
+            }
         }
         catch (Exception ex)
         {

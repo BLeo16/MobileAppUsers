@@ -1,13 +1,13 @@
 ﻿using APIConsumer;
 using MobileAppUsers.Models;
 using MobileAppUsers.Pages;
+using MobileAppUsers.Utilities;
 
 namespace MobileAppUsers
 {
     public partial class MainPage : ContentPage
     {
-        //private string ApiUrl = "https://localhost:32770/api/Users";
-        private string ApiUrl = "https://apiusersbleo.onrender.com/api/Users";
+        private string ApiUrl = APIConstants.ApiUrl;
 
         public MainPage()
         {
@@ -37,7 +37,7 @@ namespace MobileAppUsers
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", ex.Message, "OK");
+                await DisplayAlert("Error", "Login Failed", "OK");
             }
         }
 
@@ -50,7 +50,7 @@ namespace MobileAppUsers
 
             }catch(Exception ex)
             {
-                await DisplayAlert("Error", ex.Message, "OK");
+                await DisplayAlert("Error", null, "OK");
             }
         }
     }

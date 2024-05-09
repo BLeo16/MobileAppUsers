@@ -1,11 +1,12 @@
 using APIConsumer;
 using MobileAppUsers.Models;
+using MobileAppUsers.Utilities;
 
 namespace MobileAppUsers.Pages;
 
 public partial class ListUsers : ContentPage
 {
-    private string ApiUrl = "https://apiusersbleo.onrender.com/api/Users";
+    private string ApiUrl = APIConstants.ApiUrl;
     public ListUsers()
 	{
 		InitializeComponent();
