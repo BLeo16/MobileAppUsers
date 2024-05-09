@@ -67,7 +67,10 @@ namespace MobileAppUsers.Pages
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", ex.Message, "OK");
+                await DisplayAlert("Error",
+    "Username must be unique [5-10 characters]\nPassword must be between 8 and 15 characters.",
+    "OK");
+
             }
         }
 

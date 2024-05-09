@@ -17,7 +17,6 @@ public partial class Home : ContentPage
 
     private void ShowUsername()
     {
-        // Aquí puedes mostrar el nombre del usuario en un Label u otro control
         lblUserLogged.Text = $"Welcome, {LoggedInUser.username}!";
     }
     private async void BtnLogout_Clicked(object sender, EventArgs e)
@@ -73,9 +72,12 @@ public partial class Home : ContentPage
     }
     private async void BtnEdit_Clicked(object sender, EventArgs e)
     {
-        // Aquí rediriges a la página de edición pasando el ID del usuario encontrado
+
         int userId = Convert.ToInt32(lblUserId.Text);
         await Navigation.PushAsync(new EditPage(userId));
+        lblUserId.Text = string.Empty;
+        lblUsername.Text = string.Empty;
+        userInfoLayout.IsVisible = false;
     }
 
     private async void BtnDelete_Clicked(object sender, EventArgs e)
