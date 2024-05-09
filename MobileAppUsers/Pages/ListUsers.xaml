@@ -7,8 +7,11 @@
         <Button x:Name="btnBack" Text="Back" Clicked="btnBack_Clicked" />
 
         <Label Text="List Users" FontSize="Medium" HorizontalOptions="Center" />
-       
 
+        <StackLayout x:Name="UsersStackLayout">
+            <!-- Users will be added here dynamically -->
+        </StackLayout>
+        
         <Button x:Name="btnCreate" Text="Go to Create" Clicked="btnCreate_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
