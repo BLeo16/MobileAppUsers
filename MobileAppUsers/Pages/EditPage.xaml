@@ -4,7 +4,7 @@
              x:Class="MobileAppUsers.Pages.EditPage"
              Title="Edit User">
     <ContentPage.Resources>
-        <!-- Define tus estilos aquí -->
+        
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="Large" />
             <Setter Property="Margin" Value="0,10,0,0" />
