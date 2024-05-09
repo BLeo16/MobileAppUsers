@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppUsers.Pages.EditPage"
+             Title="Edit User">
+    <StackLayout Padding="20">
+        
+        <Button Text="Back" Clicked="BtnBack_Clicked" HorizontalOptions="Start" Margin="0,20,0,0"/>
+
+        <Label Text="Edit User" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10"/>
+        <Entry x:Name="txtUsername" Placeholder="Username" Margin="0,10"/>
+        <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" Margin="0,10"/>
+        <Button Text="Update" Clicked="BtnUpdate_Clicked" HorizontalOptions="FillAndExpand" Margin="0,20,0,0"/>
+
+    </StackLayout>
+</ContentPage>

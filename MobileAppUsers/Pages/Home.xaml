@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppUsers.Pages.Home"
+             Title="Home">
+    <StackLayout VerticalOptions="CenterAndExpand"
+                 HorizontalOptions="CenterAndExpand">
+        <Label x:Name="lblUserLogged"/>
+        <Button Text="Logout"
+                Clicked="BtnLogout_Clicked"
+                HorizontalOptions="Center"
+                Margin="0,20,0,0" />
+        <Button Text="List of Users"
+                Clicked="BtnListUsers_Clicked"
+                HorizontalOptions="Center"
+                Margin="0,20,0,0" />
+        <Label Text="Search user by username"
+               HorizontalOptions="Center"
+               Margin="0,20,0,0" />
+        <Entry x:Name="txtSearch"
+               Placeholder="Enter username"
+               HorizontalOptions="FillAndExpand"
+               Margin="0,20,0,0" />
+        <Button Text="Search"
+                Clicked="BtnSearch_Clicked"
+                HorizontalOptions="Center"
+                Margin="0,20,0,0" />
+        <StackLayout x:Name="userInfoLayout"
+                     Margin="0,30,0,0"
+                     IsVisible="False">
+            <Label Text="User ID:" />
+            <Label x:Name="lblUserId" />
+            <Label Text="Username:" />
+            <Label x:Name="lblUsername" />
+            <Button Text="Edit" Clicked="BtnEdit_Clicked" />
+            <Button Text="Delete" Clicked="BtnDelete_Clicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
+

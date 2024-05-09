@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppUsers.MainPage">
+
+    <StackLayout>
+
+        <Label Text="Login" FontSize="Large" HorizontalOptions="Center" />
+        <Label Text="Username" />
+        <Entry x:Name="txtUsername" Placeholder="Username" />
+        <Label Text="Password" />
+        <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True"/>
+        <Button x:Name="cmdLogin" Text="Login" Clicked="cmdLogin_Clicked" />
+
+        <Label Text="Don't have an account?" />
+        <Button x:Name="cmdRegister" Text="Register" Clicked="cmdRegister_Clicked" BackgroundColor="Transparent" TextColor="Blue" />
+
+    </StackLayout>
+
+</ContentPage>
